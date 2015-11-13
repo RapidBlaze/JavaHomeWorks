@@ -1,6 +1,6 @@
 package Lesson7.Chat;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -12,7 +12,8 @@ public class ChatServer extends Thread {
 
     // TODO: store remembered clients here
 
-    public static void main(String... args) {
+    public static void main(String... args) throws IOException {
+
         int portNumber = 7777;
         try (
                 ServerSocket serverSocket =
